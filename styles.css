@@ -1,0 +1,75 @@
+body {
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.avatar {
+    width: 150px;
+    border-bottom: 5px solid #65471D;
+    border-radius: 16px;
+    transition: 0.5s;
+}
+
+.card {
+    width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-bottom: 6px solid #65471D;
+    border-radius: 0px;
+    background-color: #CF6E61;
+    transition: 0.5s;
+    
+}
+
+.text {
+    transition: 0.2s;
+    color: #888888;
+}
+
+.border-blue {
+    border: 1px dotted blue;    
+}
+
+.card:hover {
+    border-radius: 16px;
+    animation-name: breathe;
+    animation-duration: 1.5s;
+    cursor: pointer;
+}
+
+.card:hover .avatar, .card:hover .text {
+    border-radius: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #585858;
+}
+
+.card:hover .avatar {
+    animation-name: rotation;
+    animation-duration: 1s;
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes rotation {
+    25% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes breathe {
+    25% {
+        width:400px;
+    }
+    80% {
+        width: 95%;
+    }
+    100% {
+        width: 400px;
+    }
+}
